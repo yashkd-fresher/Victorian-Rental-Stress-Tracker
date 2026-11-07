@@ -3,3 +3,4 @@ __pycache__/
 .env
 data/raw/*
 data/processed/*.duckdb
+!data/raw/README.md
