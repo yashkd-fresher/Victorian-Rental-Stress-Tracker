@@ -1,0 +1,5 @@
+check_name,rows_affected
+rent rows loaded,53722
+rent rows dropped (no valid median),0
+LGAs in rent data,79
+LGAs with no Census income (excluded from ratios),0

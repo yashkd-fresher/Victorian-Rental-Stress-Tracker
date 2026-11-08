@@ -1,0 +1,78 @@
+lga_key,lga_name,region,latest_quarter,median_rent,est_income,new_lettings,reliable,rent_to_income_pct,yoy_change_pts,rolling_4q_pct,status,stress_rank,momentum_quartile
+54,Mount Alexander,Loddon Mallee,2026-06-30,555.0,1453.0,54.0,true,38.2,4.6,36.3,In stress,1,1
+21,Gannawarra,Loddon Mallee,2026-06-30,370.0,1243.0,27.0,false,29.8,4.1,29.3,Early warning,33,1
+49,Moira,Hume,2026-06-30,500.0,1383.0,142.0,true,36.2,3.4,34.3,In stress,6,1
+61,Queenscliffe,Barwon South West,2026-06-30,580.0,1751.0,7.0,false,33.1,3.3,30.4,In stress,13,1
+68,Towong,Hume,2026-06-30,438.0,1487.0,12.0,false,29.4,3.1,26.7,Early warning,35,1
+71,Wellington,Gippsland,2026-06-30,480.0,1476.0,232.0,true,32.5,2.5,31.2,In stress,17,1
+70,Warrnambool,Barwon South West,2026-06-30,560.0,1647.0,204.0,true,34.0,2.4,32.7,In stress,11,1
+1,Alpine,Hume,2026-06-30,498.0,1555.0,56.0,true,32.0,2.2,31.0,In stress,18,1
+34,Indigo,Hume,2026-06-30,500.0,1753.0,33.0,true,28.5,2.1,28.2,Early warning,40,1
+63,Southern Grampians,Barwon South West,2026-06-30,390.0,1463.0,42.0,true,26.7,2.0,26.5,Stable,50,1
+8,Benalla,Hume,2026-06-30,490.0,1383.0,95.0,true,35.4,1.9,34.4,In stress,8,1
+2,Ararat,Grampians,2026-06-30,413.0,1453.0,60.0,true,28.4,1.8,27.6,Early warning,41,1
+15,Central Goldfields,Loddon Mallee,2026-06-30,400.0,1049.0,45.0,true,38.1,1.8,36.8,In stress,2,1
+53,Mornington Penin'a,Southern Metro,2026-06-30,650.0,1804.0,642.0,true,36.0,1.8,34.6,In stress,7,1
+29,Hepburn,Grampians,2026-06-30,500.0,1486.0,61.0,true,33.6,1.7,32.5,In stress,12,1
+73,Whitehorse,Eastern Metro,2026-06-30,650.0,2136.0,1084.0,true,30.4,1.5,30.0,In stress,28,1
+16,Colac-Otway,Barwon South West,2026-06-30,485.0,1482.0,79.0,true,32.7,1.4,31.0,In stress,14,1
+40,Manningham,Eastern Metro,2026-06-30,700.0,2228.0,515.0,true,31.4,1.4,31.1,In stress,21,1
+3,Ballarat,Grampians,2026-06-30,450.0,1658.0,994.0,true,27.1,1.3,26.5,Early warning,46,1
+7,Bayside,Southern Metro,2026-06-30,760.0,2885.0,542.0,true,26.3,1.3,26.2,Stable,55,1
+59,Port Phillip,Southern Metro,2026-06-30,650.0,2400.0,1527.0,true,27.1,1.3,26.9,Early warning,47,2
+28,Greater Shepparton,Hume,2026-06-30,495.0,1624.0,430.0,true,30.5,1.3,29.8,In stress,27,2
+46,Merri-bek,North and West Metro,2026-06-30,595.0,2254.0,1434.0,true,26.4,1.2,25.9,Stable,54,2
+20,Frankston,Southern Metro,2026-06-30,590.0,1918.0,737.0,true,30.8,1.2,30.3,In stress,25,2
+32,Horsham,Grampians,2026-06-30,430.0,1602.0,109.0,true,26.8,1.1,26.2,Stable,48,2
+12,Campaspe,Loddon Mallee,2026-06-30,480.0,1466.0,112.0,true,32.7,1.1,31.5,In stress,15,2
+18,Darebin,North and West Metro,2026-06-30,590.0,2122.0,1082.0,true,27.8,1.1,26.8,Early warning,44,2
+47,Mildura,Loddon Mallee,2026-06-30,480.0,1556.0,442.0,true,30.9,1.0,31.1,In stress,24,2
+25,Greater Bendigo,Loddon Mallee,2026-06-30,510.0,1680.0,656.0,true,30.4,0.9,30.3,In stress,30,2
+22,Glen Eira,Southern Metro,2026-06-30,640.0,2475.0,1397.0,true,25.9,0.9,25.8,Stable,58,2
+41,Mansfield,Hume,2026-06-30,580.0,1537.0,49.0,true,37.7,0.9,35.7,In stress,3,2
+26,Greater Dandenong,Southern Metro,2026-06-30,550.0,1686.0,852.0,true,32.6,0.8,32.3,In stress,16,2
+6,Baw Baw,Gippsland,2026-06-30,550.0,1735.0,258.0,true,31.7,0.8,31.6,In stress,20,2
+27,Greater Geelong,Barwon South West,2026-06-30,530.0,1847.0,1907.0,true,28.7,0.8,28.1,Early warning,38,2
+42,Maribyrnong,North and West Metro,2026-06-30,585.0,2318.0,878.0,true,25.2,0.8,24.2,Stable,61,2
+36,Knox,Eastern Metro,2026-06-30,630.0,2186.0,531.0,true,28.8,0.8,28.3,Early warning,37,2
+39,Macedon Ranges,Loddon Mallee,2026-06-30,585.0,2389.0,117.0,true,24.5,0.8,24.9,Stable,68,2
+67,Swan Hill,Loddon Mallee,2026-06-30,400.0,1600.0,83.0,true,25.0,0.5,26.8,Stable,63,2
+44,Melbourne,North and West Metro,2026-06-30,680.0,1947.0,4948.0,true,34.9,0.5,34.9,In stress,9,2
+62,South Gippsland,Gippsland,2026-06-30,440.0,1469.0,83.0,true,30.0,0.5,30.2,Early warning,31,3
+23,Glenelg,Barwon South West,2026-06-30,450.0,1408.0,77.0,true,31.9,0.5,31.5,In stress,19,3
+19,East Gippsland,Gippsland,2026-06-30,470.0,1288.0,273.0,true,36.5,0.5,36.3,In stress,5,3
+56,Murrindindi,Hume,2026-06-30,440.0,1493.0,33.0,true,29.5,0.5,28.2,Early warning,34,3
+60,Pyrenees,Grampians,2026-06-30,400.0,1277.0,12.0,false,31.3,0.5,31.9,In stress,22,3
+57,Nillumbik,North and West Metro,2026-06-30,600.0,2873.0,159.0,true,20.9,0.4,20.6,Stable,76,3
+5,Bass Coast,Gippsland,2026-06-30,500.0,1349.0,148.0,true,37.1,0.4,36.2,In stress,4,3
+51,Moonee Valley,North and West Metro,2026-06-30,575.0,2333.0,820.0,true,24.6,0.3,24.3,Stable,66,3
+43,Maroondah,Eastern Metro,2026-06-30,600.0,2166.0,448.0,true,27.7,0.3,27.8,Early warning,45,3
+35,Kingston,Southern Metro,2026-06-30,620.0,2221.0,784.0,true,27.9,0.3,27.9,Early warning,43,3
+24,Golden Plains,Grampians,2026-06-30,470.0,2203.0,42.0,true,21.3,0.3,22.0,Stable,75,3
+52,Moorabool,Grampians,2026-06-30,500.0,2071.0,142.0,true,24.1,0.3,23.7,Stable,69,3
+50,Monash,Eastern Metro,2026-06-30,670.0,2206.0,954.0,true,30.4,0.2,30.1,In stress,29,3
+64,Stonnington,Southern Metro,2026-06-30,650.0,2564.0,1504.0,true,25.4,0.2,25.2,Stable,60,3
+4,Banyule,North and West Metro,2026-06-30,580.0,2352.0,758.0,true,24.7,0.1,24.9,Stable,65,3
+31,Hobsons Bay,North and West Metro,2026-06-30,590.0,2288.0,474.0,true,25.8,0.1,26.1,Stable,59,3
+14,Casey,Southern Metro,2026-06-30,595.0,2225.0,1775.0,true,26.7,0.1,26.5,Stable,49,3
+66,Surf Coast,Barwon South West,2026-06-30,600.0,2423.0,275.0,true,24.8,0.1,24.7,Stable,64,3
+69,Wangaratta,Hume,2026-06-30,460.0,1538.0,147.0,true,29.9,0.1,29.9,Early warning,32,3
+78,Yarra Ranges,Eastern Metro,2026-06-30,620.0,2182.0,323.0,true,28.4,0.1,28.1,Early warning,42,4
+30,Hindmarsh,Grampians,2026-06-30,320.0,1345.0,11.0,false,23.8,0.0,24.2,Stable,70,4
+9,Boroondara,Eastern Metro,2026-06-30,650.0,2757.0,1051.0,true,23.6,0.0,23.5,Stable,71,4
+58,Northern Grampians,Grampians,2026-06-30,400.0,1304.0,42.0,true,30.7,0.0,31.0,In stress,26,4
+10,Brimbank,North and West Metro,2026-06-30,500.0,1747.0,825.0,true,28.6,0.0,28.5,Early warning,39,4
+13,Cardinia,Southern Metro,2026-06-30,575.0,2174.0,605.0,true,26.4,-0.1,26.3,Stable,53,4
+37,Latrobe,Gippsland,2026-06-30,430.0,1462.0,572.0,true,29.4,-0.2,29.7,Stable,36,4
+48,Mitchell,Hume,2026-06-30,470.0,1994.0,341.0,true,23.6,-0.2,23.4,Stable,72,4
+65,Strathbogie,Hume,2026-06-30,470.0,1378.0,38.0,true,34.1,-0.3,35.3,In stress,10,4
+74,Whittlesea,North and West Metro,2026-06-30,540.0,2051.0,1268.0,true,26.3,-0.3,26.1,Stable,56,4
+75,Wodonga,Hume,2026-06-30,540.0,1738.0,309.0,true,31.1,-0.4,31.1,In stress,23,4
+77,Yarra,North and West Metro,2026-06-30,660.0,2634.0,1154.0,true,25.1,-0.4,25.1,Stable,62,4
+33,Hume,North and West Metro,2026-06-30,525.0,1976.0,1629.0,true,26.6,-0.6,26.8,Stable,51,4
+11,Buloke,Loddon Mallee,2026-06-30,310.0,1262.0,11.0,false,24.6,-0.8,27.7,Stable,67,4
+76,Wyndham,North and West Metro,2026-06-30,490.0,2347.0,2803.0,true,20.9,-1.1,21.2,Stable,77,4
+45,Melton,North and West Metro,2026-06-30,480.0,2189.0,2151.0,true,21.9,-1.1,22.2,Stable,73,4
+17,Corangamite,Barwon South West,2026-06-30,380.0,1465.0,54.0,true,25.9,-2.2,27.5,Stable,57,4
+79,Yarriambiack,Grampians,2026-06-30,280.0,1279.0,9.0,false,21.9,-2.3,25.5,Stable,74,4
+55,Moyne,Barwon South West,2026-06-30,470.0,1775.0,27.0,false,26.5,-2.8,26.8,Stable,52,4
