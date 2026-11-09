@@ -1,0 +1,78 @@
+lga_key,lga_name,backtest_mape_pct,forecast_4q_pct,crosses_30pct,forecast_reliable
+1,Alpine,2.2,32.9,True,True
+2,Ararat,2.4,29.0,False,True
+3,Ballarat,1.4,27.7,False,True
+4,Banyule,1.7,25.4,False,True
+5,Bass Coast,3.6,38.1,True,True
+6,Baw Baw,1.4,32.9,True,True
+7,Bayside,5.3,27.1,False,False
+8,Benalla,1.1,36.4,True,True
+9,Boroondara,2.5,23.8,False,True
+10,Brimbank,1.1,29.0,False,True
+11,Buloke,9.4,28.9,False,False
+12,Campaspe,2.7,33.8,True,True
+13,Cardinia,3.5,26.6,False,True
+14,Casey,1.5,27.5,False,True
+15,Central Goldfields,4.0,37.6,True,True
+16,Colac-Otway,3.7,32.7,True,True
+17,Corangamite,9.3,26.8,False,False
+18,Darebin,2.6,28.5,False,True
+19,East Gippsland,2.0,37.7,True,True
+20,Frankston,0.4,31.8,True,True
+21,Gannawarra,6.5,30.0,True,False
+22,Glen Eira,3.9,27.3,False,True
+23,Glenelg,2.8,32.5,True,True
+24,Golden Plains,3.1,22.1,False,True
+25,Greater Bendigo,1.6,31.8,True,True
+26,Greater Dandenong,0.7,33.5,True,True
+27,Greater Geelong,0.9,29.1,False,True
+28,Greater Shepparton,0.6,31.6,True,True
+29,Hepburn,2.8,33.8,True,True
+30,Hindmarsh,4.5,25.8,False,True
+31,Hobsons Bay,1.0,26.4,False,True
+32,Horsham,2.2,27.3,False,True
+33,Hume,0.2,26.0,False,True
+34,Indigo,3.1,30.2,True,True
+35,Kingston,1.1,28.5,False,True
+36,Knox,1.6,29.8,False,True
+37,Latrobe,2.7,30.8,True,True
+39,Macedon Ranges,1.5,25.5,False,True
+40,Manningham,1.9,32.1,True,True
+41,Mansfield,4.9,37.9,True,True
+42,Maribyrnong,2.7,25.7,False,True
+43,Maroondah,1.2,28.5,False,True
+44,Melbourne,1.8,35.9,True,True
+45,Melton,1.2,21.1,False,True
+46,Merri-bek,5.2,28.5,False,False
+47,Mildura,1.5,32.5,True,True
+48,Mitchell,7.4,23.9,False,False
+49,Moira,3.7,36.2,True,True
+50,Monash,3.5,31.2,True,True
+51,Moonee Valley,3.6,25.4,False,True
+52,Moorabool,1.8,24.5,False,True
+53,Mornington Penin'a,2.1,37.0,True,True
+54,Mount Alexander,3.9,37.0,True,True
+55,Moyne,7.0,29.0,False,False
+56,Murrindindi,3.7,29.6,False,True
+57,Nillumbik,3.8,21.3,False,True
+58,Northern Grampians,1.6,32.9,True,True
+59,Port Phillip,5.3,27.7,False,False
+60,Pyrenees,1.4,32.8,True,True
+61,Queenscliffe,10.7,32.2,True,False
+62,South Gippsland,3.3,31.4,True,True
+63,Southern Grampians,1.6,27.4,False,True
+64,Stonnington,2.3,26.0,False,True
+65,Strathbogie,4.1,38.3,True,True
+66,Surf Coast,0.9,24.9,False,True
+67,Swan Hill,5.3,27.9,False,False
+68,Towong,13.3,30.2,True,False
+69,Wangaratta,1.6,31.2,True,True
+70,Warrnambool,2.8,34.9,True,True
+71,Wellington,3.1,33.8,True,True
+73,Whitehorse,4.0,31.6,True,True
+74,Whittlesea,1.0,27.2,False,True
+75,Wodonga,3.2,32.6,True,True
+76,Wyndham,1.7,20.2,False,True
+77,Yarra,3.0,25.0,False,True
+78,Yarra Ranges,3.6,28.3,False,True
+79,Yarriambiack,9.4,27.8,False,False
