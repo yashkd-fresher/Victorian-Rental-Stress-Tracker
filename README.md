@@ -4,9 +4,9 @@
 
 A data project built on real Australian government data. It turns three public datasets into an early-warning dashboard that shows where renters are under the most pressure, and which councils are likely to be next.
 
-> **Author:** Yash Deshmane | **Dashboard PDF:** [`Victorian_Rental_Stress_Dashboard.pdf`](powerbi/Dashboard/Victorian Rental Stress Dashboard (1).pdf)
+> **Author:** Yash Deshmane | **Dashboard PDF:** [Victorian_Rental_Stress_Dashboard.pdf](powerbi/Dashboard/Victorian Rental Stress Dashboard (1).pdf)
 
-![Overview page of the dashboard](docs/img/page1_overview.png)
+## ![Overview page of the dashboard](docs/img/page1_overview.png)
 
 ---
 
