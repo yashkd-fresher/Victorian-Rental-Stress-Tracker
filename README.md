@@ -4,7 +4,7 @@
 
 A data project built on real Australian government data. It turns three public datasets into an early-warning dashboard that shows where renters are under the most pressure, and which councils are likely to be next.
 
-> **Author:** Yash Deshmane | **Dashboard PDF:** [`Victorian_Rental_Stress_Dashboard.pdf`](/Users/yashkailasdeshmane/vic-rental-stress/powerbi/Dashboard/Victorian Rental Stress Dashboard (1).pdf)
+> **Author:** Yash Deshmane | **Dashboard PDF:** [`Victorian_Rental_Stress_Dashboard.pdf`](powerbi/Dashboard/Victorian Rental Stress Dashboard (1).pdf)
 
 ![Overview page of the dashboard](docs/img/page1_overview.png)
 
@@ -55,7 +55,7 @@ A simple four-quarter forecast flags **6 more councils** (5 on early warning, 1 
 **5. The headline number depends on assumptions, so I tested it.**
 If household incomes are 5% lower than my estimate, **40** councils are over the line. If they are 5% higher, **20** are. The honest summary is "around 30, within a range of about 20 to 40".
 
-![Council drill-down page](/Users/yashkailasdeshmane/vic-rental-stress/docs/img/Page2.png)
+![Council drill-down page](docs/img/Page2.png)
 
 ---
 
@@ -88,7 +88,7 @@ If household incomes are 5% lower than my estimate, **40** councils are over the
 | **3. Early-warning list** | Who should we act on first? All 77 councils ranked, plus the watchlist of councils forecast to cross 30% |
 | **4. Method and data quality** | Why should I trust this? Sources, calculation, limits, data checks, and the sensitivity test |
 
-![Early-warning list](/Users/yashkailasdeshmane/vic-rental-stress/docs/img/Page3.png)
+![Early-warning list](docs/img/Page3.png)
 
 ---
 
