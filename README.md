@@ -4,7 +4,7 @@
 
 A data project built on real Australian government data. It turns three public datasets into an early-warning dashboard that shows where renters are under the most pressure, and which councils are likely to be next.
 
-> **Author:** Yash Deshmane | **Walkthrough video (3 min):** [add link] | **Dashboard PDF:** [`docs/Victorian_Rental_Stress_Dashboard.pdf`](docs/Victorian_Rental_Stress_Dashboard.pdf)
+> **Author:** Yash Deshmane | **Dashboard PDF:** [`docs/Victorian_Rental_Stress_Dashboard.pdf`](/Users/yashkailasdeshmane/vic-rental-stress/powerbi/Dashboard/Victorian Rental Stress Dashboard (1).pdf)
 
 ![Overview page of the dashboard](docs/img/page1_overview.png)
 
@@ -44,10 +44,10 @@ This project answers three practical questions:
 The five highest councils are Mount Alexander (38.2%), Central Goldfields (38.1%), Mansfield (37.7%), Bass Coast (37.1%) and East Gippsland (36.5%). In plain terms, in Mount Alexander about **$38 of every $100** of household income goes on rent. Melbourne's city council is also above the line, at 34.9%.
 
 **2. Rents are rising faster than pay.**
-Average council rents rose about **6.5%** over the year to June 2026, while Victorian wages rose about **3.1%**. That gap is why the burden keeps climbing. *(Rent growth is an average of council medians, not a statewide median.)*
+Average council rents rose about **5.4%** over the year to June 2026, while Victorian wages rose about **3.1%**, so rents grew nearly twice as fast. That gap is why the burden keeps climbing. *(Rent growth compares the 76 councils that have a figure in both quarters, and averages council medians rather than using a statewide median.)*
 
 **3. It is a long-running trend, not a blip.**
-Across all councils, rent as a share of estimated income rose from roughly 23% in 2019 to roughly 29% in 2026.
+Across all councils, rent as a share of estimated income rose from about 23% in early 2019 to about 28% in mid-2026.
 
 **4. More councils are heading towards the line.**
 A simple four-quarter forecast flags **6 more councils** (5 on early warning, 1 currently stable) that are likely to cross 30% within a year.
@@ -55,7 +55,7 @@ A simple four-quarter forecast flags **6 more councils** (5 on early warning, 1 
 **5. The headline number depends on assumptions, so I tested it.**
 If household incomes are 5% lower than my estimate, **40** councils are over the line. If they are 5% higher, **20** are. The honest summary is "around 30, within a range of about 20 to 40".
 
-![Council drill-down page](docs/img/page2_drilldown.png)
+![Council drill-down page](/Users/yashkailasdeshmane/vic-rental-stress/docs/img/Page2.png)
 
 ---
 
@@ -88,7 +88,7 @@ If household incomes are 5% lower than my estimate, **40** councils are over the
 | **3. Early-warning list** | Who should we act on first? All 77 councils ranked, plus the watchlist of councils forecast to cross 30% |
 | **4. Method and data quality** | Why should I trust this? Sources, calculation, limits, data checks, and the sensitivity test |
 
-![Early-warning list](docs/img/page3_early_warning.png)
+![Early-warning list](/Users/yashkailasdeshmane/vic-rental-stress/docs/img/Page3.png)
 
 ---
 
@@ -175,18 +175,6 @@ docs/               Methodology, data dictionary, decisions, data quality, AI go
 .github/workflows/  Scheduled AI-brief refresh
 ```
 
-### How to run it
-
-```bash
-git clone https://github.com/yashkd-fresher/vic-rental-stress.git
-cd vic-rental-stress
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-# download the raw files into data/raw as described in data/raw/README.md
-python src/run_pipeline.py
-```
-
 The pipeline stops if any validation check fails. To generate AI briefs, set `ANTHROPIC_API_KEY` in your environment (never commit it) and run `python src/briefs.py`.
 
 ### Data quality and validation
@@ -194,6 +182,7 @@ The pipeline stops if any validation check fails. To generate AI briefs, set `AN
 - Three summary rows (Metro, Non-Metro, Victoria) were mixed into the council rows. They are tagged and kept out of council analysis.
 - Three council names differed between sources (Colac-Otway, Mornington Peninsula, and Merri-bek, which is the renamed Moreland). A mapping file bridges them.
 - Loddon and West Wimmera have no June 2026 median and are excluded from the latest-quarter list and the forecast.
+- Queenscliffe has a June 2026 median (from only 7 lettings) but no June 2025 median, so the year-on-year rent comparison uses the 76 councils present in both quarters. My first version of that comparison mixed different sets of councils and showed 6.54%. I caught it with a like-for-like check and corrected it to 5.4%.
 - Automated checks cover council count, missing income, plausible ratio ranges and the wage base quarter.
 - I hand-checked Mount Alexander: $555 rent divided by $1,453 estimated income is 38.2%, matching the pipeline and the dashboard.
 
@@ -244,4 +233,4 @@ Advanced SQL (CTEs, window functions, star schema), Python data engineering, dat
 
 Built by **Yash Deshmane** as an end-to-end data analyst portfolio project using real Australian data. Feedback is welcome.
 
-**LinkedIn:** [add link] | **GitHub:** [yashkd-fresher](https://github.com/yashkd-fresher)
+**LinkedIn:** [https://www.linkedin.com/in/yash-deshmane-50005b22a/] | **GitHub:** [yashkd-fresher](https://github.com/yashkd-fresher)
