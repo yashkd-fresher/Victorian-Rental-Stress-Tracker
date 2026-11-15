@@ -4,9 +4,9 @@
 
 A data project built on real Australian government data. It turns three public datasets into an early-warning dashboard that shows where renters are under the most pressure, and which councils are likely to be next.
 
-> **Author:** Yash Deshmane 
+> **Author:** Yash Deshmane
 
-## ![Overview page of the dashboard](docs/img/page1_overview.png)
+![Overview page of the dashboard](docs/img/page1_overview.png)
 
 ---
 
@@ -75,7 +75,7 @@ If household incomes are 5% lower than my estimate, **40** councils are over the
 4. **Calculated rent as a share of income** for every council and quarter, and sorted councils into In stress, Early warning and Stable.
 5. **Forecast four quarters ahead**, then tested the forecast by hiding the last four known quarters and checking how close it got. The typical miss was about **2.7%**.
 6. **Built a four-page dashboard** so anyone can explore the results.
-7. **Added AI-written summaries with a safety check.** The AI only sees my calculated numbers, and a script checks that every number in its text can be traced back to the data. Anything that fails is held back.
+7. **Added automatic checks.** The pipeline stops if a validation check fails, and a GitHub check re-tests the published results every time the code changes.
 
 ---
 
@@ -126,8 +126,7 @@ I would rather be upfront about the limits.
 | Language | Python 3.11 (pandas, statsmodels, openpyxl, requests) |
 | Database and SQL | DuckDB, with layered SQL (staging, star schema, mart, analysis) using CTEs and window functions |
 | Dashboard | Power BI (semantic model, DAX measures, Power Query) |
-| AI | Claude API (`claude-sonnet-5-5`) with programmatic output verification |
-| Automation | GitHub Actions (scheduled brief refresh), one-command pipeline script |
+| Quality and automation | Automated validation checks, a one-command pipeline, and GitHub Actions (checks on every push) |
 | Version control | Git and GitHub |
 | Editor | VS Code |
 
@@ -159,23 +158,35 @@ Raw files (DFFH, ABS)
    -> SQL star schema (dim_lga, dim_date, fact_rent, fact_income, fact_wage)
    -> SQL mart (rent-to-income) and analysis (early-warning list)
    -> Python forecast with backtest, plus sensitivity test
+   -> Validation checks
    -> Power BI semantic model and 4-page dashboard
-   -> Claude API briefs with number verification
 ```
 
 ### Repository structure
 
 ```
-src/                Python scripts (ingest, validate, export, forecast, briefs, pipeline)
+src/                Python scripts (ingest, validate, export, forecast, sensitivity, pipeline, output checks)
 sql/                Layered SQL: 01_staging, 02_model, 03_mart, 04_analysis
 reference/          LGA name mapping used to join sources
 data/processed/     Model outputs (CSV) and forecasts
 powerbi/            Workbook used to load the Power BI model
-docs/               Methodology, data dictionary, decisions, data quality, AI governance, memo, screenshots
-.github/workflows/  Scheduled AI-brief refresh
+docs/               Methodology, data dictionary, decisions, data quality, memo, screenshots
+.github/workflows/  Automated checks that run on every push
 ```
 
-The pipeline stops if any validation check fails. To generate AI briefs, set `ANTHROPIC_API_KEY` in your environment (never commit it) and run `python src/briefs.py`.
+### How to run it
+
+```bash
+git clone https://github.com/yashkd-fresher/vic-rental-stress.git
+cd vic-rental-stress
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+# download the raw files into data/raw as described in data/raw/README.md
+python src/run_pipeline.py
+```
+
+The pipeline stops if any validation check fails, and finishes by checking its own outputs.
 
 ### Data quality and validation
 
@@ -186,23 +197,22 @@ The pipeline stops if any validation check fails. To generate AI briefs, set `AN
 - Automated checks cover council count, missing income, plausible ratio ranges and the wage base quarter.
 - I hand-checked Mount Alexander: $555 rent divided by $1,453 estimated income is 38.2%, matching the pipeline and the dashboard.
 
-### The AI layer
+### Quality checks and automation
 
-The model receives only structured numbers for each flagged council and writes three sentences. A script then extracts every number from the text and checks it against that council's data. Briefs with untraceable numbers are excluded, and I read all of the rest by hand. Pass rate: **[X]%**. Details are in [`docs/ai_governance.md`](docs/ai_governance.md).
-
-### Automation and refresh
-
-A GitHub Action refreshes the AI briefs each quarter, with the API key held as a secret. The data refresh is a short manual checklist, because source links change each quarter and a person should review new data before it is published:
+- `src/validate.py` runs six checks on the database and stops the pipeline if any fail.
+- `src/check_outputs.py` re-tests the published CSV results: one row per council, valid statuses, plausible ratios, status consistent with the 30% line, a complete forecast, and a sensitivity table that matches the headline count.
+- A GitHub Action runs a syntax check and `check_outputs.py` on every push, so a broken change is flagged immediately.
+- The data refresh is a short manual checklist, because source links change each quarter and a person should review new data before it is published:
 
 1. Download the new rental workbook and wage table into `data/raw`.
-2. Run `python src/run_pipeline.py` and confirm validation passes.
-3. Check for new name mismatches.
-4. Run `python src/briefs.py` and review any failed checks.
+2. Update file names in the ingest scripts if they changed.
+3. Run `python src/run_pipeline.py` and confirm validation passes.
+4. Check for new council-name mismatches.
 5. Refresh the dashboard data and commit.
 
 ### Skills demonstrated
 
-Advanced SQL (CTEs, window functions, star schema), Python data engineering, data validation, time-series forecasting with backtesting, sensitivity analysis, Power BI modelling and DAX, dashboard design, applied AI with verification, Git and automation, and plain-language communication of results.
+Advanced SQL (CTEs, window functions, star schema), Python data engineering, data validation and automated testing, time-series forecasting with backtesting, sensitivity analysis, Power BI modelling and DAX, dashboard design, Git and GitHub Actions, and plain-language communication of results.
 
 ---
 
@@ -210,7 +220,8 @@ Advanced SQL (CTEs, window functions, star schema), Python data engineering, dat
 
 - Add **suburb-level** analysis, since councils hide big differences within them.
 - Use **newer income data** when the next Census is released.
-- Add **automated tests** for row counts and joins.
+- Add plain-English **AI summaries** for each flagged council, with code that checks every number against the data before it is shown.
+- Store the processed workbook in SharePoint, turn on scheduled refresh, and trigger refreshes through the Power BI REST API once validation passes.
 - Interview a housing-service user to refine which measures matter most.
 
 ---
@@ -223,7 +234,6 @@ Advanced SQL (CTEs, window functions, star schema), Python data engineering, dat
 | [`docs/data_dictionary.md`](docs/data_dictionary.md) | Every table and column |
 | [`docs/decisions.md`](docs/decisions.md) | Why I chose each approach |
 | [`docs/data_quality.md`](docs/data_quality.md) | Problems found and how I fixed them |
-| [`docs/ai_governance.md`](docs/ai_governance.md) | Prompt, verification, pass rate, review rule |
 | [`docs/dax_measures.md`](docs/dax_measures.md) | The Power BI measures |
 | [`docs/insight_memo.pdf`](docs/insight_memo.pdf) | Two-page summary for a non-technical reader |
 
@@ -233,4 +243,4 @@ Advanced SQL (CTEs, window functions, star schema), Python data engineering, dat
 
 Built by **Yash Deshmane** as an end-to-end data analyst portfolio project using real Australian data. Feedback is welcome.
 
-**LinkedIn:** [https://www.linkedin.com/in/yash-deshmane-50005b22a/] | **GitHub:** [yashkd-fresher](https://github.com/yashkd-fresher)
+**LinkedIn:** [Yash Deshmane](https://www.linkedin.com/in/yash-deshmane-50005b22a/) | **GitHub:** [yashkd-fresher](https://github.com/yashkd-fresher)
