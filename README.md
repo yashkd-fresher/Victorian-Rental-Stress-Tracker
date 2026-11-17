@@ -12,7 +12,11 @@ A data project built on real Australian government data. It turns three public d
 
 ## The 30-second version
 
-When rent takes **30% or more of a household's income**, it is widely treated as a sign of *housing stress*: there is less left for food, power, transport and savings.
+"My rent keeps rising faster than my pay. Is it just me, or is renting getting unaffordable, and where in Victoria is it worst?"
+
+That is the question this project answers, using real data.
+
+When rent takes 30% or more of a household's income, it is widely treated as a sign of housing stress: there is less left for food, power, transport and savings.
 
 I compared what it costs to rent in each of Victoria's 79 councils with an estimate of what households there earn. For June 2026:
 
@@ -24,6 +28,7 @@ I compared what it costs to rent in each of Victoria's 79 councils with an estim
 
 *(77 councils had a June 2026 rent figure. Two small rural councils had too few new rentals to report.)*
 
+The short answer: no, it is not just you. Rents rose about 5.4% last year while wages rose about 3.1%, and the pressure is strongest in regional Victoria.
 ---
 
 ## Why this matters
