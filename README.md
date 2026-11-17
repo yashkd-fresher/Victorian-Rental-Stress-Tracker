@@ -182,8 +182,8 @@ docs/               Methodology, data dictionary, decisions, data quality, memo,
 ### How to run it
 
 ```bash
-git clone https://github.com/yashkd-fresher/vic-rental-stress.git
-cd vic-rental-stress
+git clone https://github.com/yashkd-fresher/Victorian-Rental-Stress-Tracker.git
+cd Victorian-Rental-Stress-Tracker
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
